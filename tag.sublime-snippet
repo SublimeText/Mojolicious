@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<% ${1} %>]]></content>
+	<tabTrigger><![CDATA[<%]]></tabTrigger>
+	<scope>source.mojo.html</scope>
+</snippet>

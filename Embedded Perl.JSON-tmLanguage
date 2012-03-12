@@ -1,0 +1,68 @@
+{
+	"name": "Mojolicious Embedded Perl",
+	"scopeName": "source.mojo.html",
+	"fileTypes": ["html.ep"],
+	"patterns": [
+		{
+			"name": "comment.line.mojo",
+			"match": "(%#(.+))$"
+		},
+		{
+			"name": "comment.line.mojo",
+			"match": "(\\<%#(.+))\\%>"
+		},
+		{
+			"name": "source.mojo.embedded",
+			"begin": "(\\<%=?=?)",
+			"beginCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" }
+			},
+			"patterns": [
+				{ "include": "#mojo_support" },
+				{ "include": "source.perl" }
+			],
+			"end": "(=?%\\>)",
+			"endCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" }
+			}
+		},
+		{
+			"name": "source.mojo.embedded.single",
+			"begin": "(%=?=?)",
+			"beginCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" }
+			},
+			"patterns": [
+				{ "include": "#mojo_invalid" },
+				{ "include": "#mojo_support" },
+				{ "include": "source.perl" }
+			],
+			"end": "$"
+		},
+		{
+			"name": "text.html.basic",
+			"patterns": [
+				{ "include" : "text.html.basic" }
+			]
+		}
+	],
+	"repository": {
+		"mojo_support" : {
+			"patterns": [
+				{
+					"name": "support.function.mojo",
+					"match": " \\b(app|content|content_for|dumper|extends|flash|include|layout|memorize|param|session|stash|url_for|title|base_tag|check_box|file_field|form_for|hidden_field|input_tag|javascript|link_to|password_field|radio_button|select_field|stylesheet|submit_button|tag|text_area|text_field)\\b "
+				}
+			]
+		},
+		"mojo_invalid" : {
+			"patterns": [
+				{
+					"name": "invalid.punctuation.mojo",
+					"match": "=?%\\>"
+				}
+			]
+		}
+	},
+	"uuid": "dde3a46b-24e2-4bfd-b911-b86ba73489ba"
+}
