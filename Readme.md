@@ -9,9 +9,9 @@ Completions
 
 Inside a Embedded Perl block the following completions are available:
 
-`&lt;%`
-`&lt;%=`
-`&lt;%==`
+`<%`
+`<%=`
+`<%==`
 `app`
 `content`
 `content_for`
