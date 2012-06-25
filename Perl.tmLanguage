@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>pl</string>
+		<string>pm</string>
+		<string>t</string>
+	</array>
+	<key>name</key>
+	<string>Mojolicious in Perl</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>^__DATA__\n?</string>
+			<key>end</key>
+			<string>^__END__\n?</string>
+			<key>name</key>
+			<string>source.mojo.block</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(^@@.*)</string>
+					<key>name</key>
+					<string>comment.line.mojo</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.mojo.html</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.perl</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.perl.mojolicious</string>
+	<key>uuid</key>
+	<string>affe60e8-2db2-47eb-978d-fce72098cc51</string>
+</dict>
+</plist>

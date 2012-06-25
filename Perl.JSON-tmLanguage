@@ -1,0 +1,21 @@
+{
+	"name": "Mojolicious in Perl",
+	"scopeName": "source.perl.mojolicious",
+	"fileTypes": ["pl", "pm", "t"],
+	"patterns": [
+		{
+			"name": "source.mojo.block",
+			"begin": "^__DATA__\\n?",
+			"patterns": [
+				{
+					"name": "comment.line.mojo",
+					"match": "(^@@.*)"
+				},
+				{ "include": "source.mojo.html" }
+			],
+			"end": "^__END__\\n?"
+		},
+		{ "include": "source.perl" }
+	],
+	"uuid": "affe60e8-2db2-47eb-978d-fce72098cc51"
+}

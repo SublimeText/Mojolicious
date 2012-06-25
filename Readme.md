@@ -1,11 +1,8 @@
-Description
-------------------
+# Description
 
 This plugin has a syntax, completions, and snippets for working with Mojolicious (http://mojolicio.us) Embedded Perl templates.
 
-
-Completions
-------------------
+# Completions
 
 Inside a Embedded Perl block the following completions are available:
 
@@ -44,8 +41,7 @@ Inside a Embedded Perl block the following completions are available:
 `text_area`
 `text_field`
 
-Perl Snippets
-------------------
+# Perl Snippets
 
 From a Mojolicious controller you can use these snippets:
 
@@ -56,10 +52,15 @@ From a Mojolicious controller you can use these snippets:
 `mdump` -> `$self->app->log->debug($self->dumper(${1:object}));`
 
 
-Todo
-------------------
+# Todo
 
 * Default everything not in a Mojolicious block to HTML
-* Add stuff for Mojo::Lite
-* Add stuff Mojolicious helpers for inside Perl source
+* Add (more) stuff for Mojo::Lite
+* Add Mojolicious helpers for inside Perl source
 * Make awesomer
+
+# Changelog
+
+## June 25, 2012
+
+* Resolved Issue #1. Added `JSON-tmLanguage` and `tmLanguage` syntaxes for Mojolicious' Embedded Perl in Perl `__DATA__` sections.
