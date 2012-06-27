@@ -89,6 +89,68 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(%= javascript begin)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.embedded.mojo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(% end)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.embedded.mojo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>source.js.embedded</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(%= stylesheet begin)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.embedded.mojo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(% end)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.embedded.mojo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>source.css.embedded</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.css</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>name</key>
 			<string>text.html.basic</string>
 			<key>patterns</key>
