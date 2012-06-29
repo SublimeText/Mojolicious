@@ -12,8 +12,46 @@
 			"match": "(\\<%#(.+))\\%>"
 		},
 		{
+			"name": "source.mojo.block",
+			"begin": "(\\<?%=) (javascript) (begin)\\s*(%\\>)?",
+			"beginCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" },
+				"2": { "name": "support.function.mojo" },
+				"3": { "name": "entity.name.function.mojo" },
+				"4": { "name": "punctuation.section.embedded.mojo" }
+			},
+			"patterns": [
+				{ "include": "source.js" }
+			],
+			"end": "(\\<?%) (end)\\s*(%\\>)?",
+			"endCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" },
+				"2": { "name": "entity.name.function.mojo" },
+				"3": { "name": "punctuation.section.embedded.mojo" }
+			}
+		},
+		{
+			"name": "source.mojo.block",
+			"begin": "(\\<?%=) (stylesheet) (begin)\\s*(%\\>)?",
+			"beginCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" },
+				"2": { "name": "support.function.mojo" },
+				"3": { "name": "entity.name.function.mojo" },
+				"4": { "name": "punctuation.section.embedded.mojo" }
+			},
+			"patterns": [
+				{ "include": "source.css" }
+			],
+			"end": "(\\<?%) (end)\\s*(%\\>)?",
+			"endCaptures": {
+				"1": { "name": "punctuation.section.embedded.mojo" },
+				"2": { "name": "entity.name.function.mojo" },
+				"3": { "name": "punctuation.section.embedded.mojo" }
+			}
+		},
+		{
 			"name": "source.mojo.embedded",
-			"begin": "(\\<%=?=?)",
+			"begin": "(\\<%={,2})",
 			"beginCaptures": {
 				"1": { "name": "punctuation.section.embedded.mojo" }
 			},
@@ -28,7 +66,7 @@
 		},
 		{
 			"name": "source.mojo.embedded.single",
-			"begin": "(%=?=?)",
+			"begin": "(%={,2})",
 			"beginCaptures": {
 				"1": { "name": "punctuation.section.embedded.mojo" }
 			},
@@ -52,6 +90,10 @@
 				{
 					"name": "support.function.mojo",
 					"match": " \\b(app|content|content_for|dumper|extends|flash|include|layout|memorize|param|session|stash|url_for|title|base_tag|check_box|file_field|form_for|hidden_field|input_tag|javascript|link_to|password_field|radio_button|select_field|stylesheet|submit_button|tag|text_area|text_field)\\b "
+				},
+				{
+					"name": "entity.name.function.mojo",
+					"match": "\\b(begin|end)\\b"
 				}
 			]
 		},

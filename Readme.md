@@ -61,6 +61,11 @@ From a Mojolicious controller you can use these snippets:
 
 # Changelog
 
+## June 28, 2012
+
+* Resolved Issue #3 (and Issue #2). Adjusting syntax to use `source.js` and `source.css` syntax inside javascript/stylesheet blocks.
+* Set a scope name (*entity.name.function.mojo*) on `begin` and `end` within EP tags
+
 ## June 25, 2012
 
 * Resolved Issue #1. Added `JSON-tmLanguage` and `tmLanguage` syntaxes for Mojolicious' Embedded Perl in Perl `__DATA__` sections.
