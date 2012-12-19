@@ -171,7 +171,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(%={,2})</string>
+			<string>^\s*(%={,2})</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
