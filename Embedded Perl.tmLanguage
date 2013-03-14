@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>html.ep</string>
+		<string>xml.ep</string>
 	</array>
 	<key>name</key>
 	<string>Mojolicious Embedded Perl</string>
