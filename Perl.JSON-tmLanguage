@@ -5,15 +5,38 @@
 	"patterns": [
 		{
 			"name": "source.mojo.block",
-			"begin": "^__DATA__\\n?",
+			"begin": "^(__DATA__)\\b\\n?",
+			"beginCaptures": {
+				"1": { "name": "comment.line.mojo" }
+			},
 			"patterns": [
+				{
+					"begin": "^(@@ .*[.]js\\b.*)\\n?",
+					"beginCaptures": {
+						"1": { "name": "comment.line.mojo" }
+					},
+					"end": "^(?=@@|__END__\\b)",
+					"patterns": [
+						{ "include": "source.js" }
+					]
+				},
+				{
+					"begin": "^(@@ .*[.]css\\b.*)\\n?",
+					"beginCaptures": {
+						"1": { "name": "comment.line.mojo" }
+					},
+					"end": "^(?=@@|__END__\\b)",
+					"patterns": [
+						{ "include": "source.css" }
+					]
+				},
 				{
 					"name": "comment.line.mojo",
 					"match": "(^@@.*)"
 				},
 				{ "include": "source.mojo.html" }
 			],
-			"end": "^__END__\\n?"
+			"end": "(?=^__END__\\b\\n?)"
 		},
 		{ "include": "source.perl" }
 	],
