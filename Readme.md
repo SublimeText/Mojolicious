@@ -1,6 +1,6 @@
 # Description
 
-This plugin has a syntax, completions, and snippets for working with Mojolicious (http://mojolicio.us) Embedded Perl templates.
+This plugin has a syntax, completions, and snippets for working with Mojolicious (http://mojolicious.org) Embedded Perl templates.
 
 # Completions
 
